@@ -1,20 +1,18 @@
 <template>
-<!--  <div :style="{ bg:  ? :active }">-->
     <the-header></the-header>
     <main class="main">
       <div class="container">
         <div class="content">
           <RouterView/>
         </div>
-
       </div>
     </main>
-<!--  </div>-->
 </template>
 
 <script>
 import {RouterView} from 'vue-router';
 import TheHeader from "@/components/TheHeader.vue";
+
 
 export default {
   name: 'App',
@@ -30,7 +28,9 @@ export default {
 
   computed() {},
 
-  mounted() {},
+  mounted() {
+
+  },
 
   components: {
     TheHeader,
@@ -39,10 +39,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import "@/styles/base/mixins.scss";
 
 .content {
-  padding-top: 100px;
+  padding-top: 120px;
+    @include breakpoint(lg) {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
 }
 </style>
