@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView from '../views/HomeView.vue';
+import SearchView from "@/views/SearchView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,20 +13,19 @@ const router = createRouter({
     },
     {
       path: '/search',
-      name: 'search',
-      component: ()=> import('@/views/SearchView'),
+      name: 'SearchView',
+      component: SearchView,
     },
     {
       path: '/favorite',
       name: 'favorite',
-      component: ()=> import('@/views/FavoriteView'),
+      component: ()=> import('@/views/FavoriteView.vue'),
     },
     {
-      path: '/movies/:id',
+      path: '/:id',
       name: 'movies',
       component: ()=> import('@/views/MovieView.vue'),
     },
-    /* В конце списка - 404 */
     // {
     //   path: "/:pathMatch(.*)*",
     //   name: "not-found",

@@ -2,13 +2,11 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-
         <nav class="navigation">
           <RouterLink class="navigation__item" to="/">Популярные фильмы</RouterLink>
-          <RouterLink class="navigation__item" to="/favorites">Буду смотреть</RouterLink>
+          <RouterLink class="navigation__item" to="/favorite">Буду смотреть</RouterLink>
         </nav>
         <Search/>
-
       </div>
     </div>
   </header>
@@ -26,7 +24,9 @@ export default {
   },
 
   data() {
-    return {}
+    return {
+
+    }
   },
 
   methods: {},
@@ -39,10 +39,10 @@ export default {
 @import "@/styles/base/mixins.scss";
 
 .header {
-  padding: 10px 0;
+  padding: 20px 0;
   margin-bottom: 10px;
   z-index: 4;
-position: absolute;
+  position: absolute;
   right: 0;
   left: 0;
   background: transparent;
@@ -56,12 +56,10 @@ position: absolute;
 
 
 .header__inner {
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   @include breakpoint(lg) {
-    position: relative;
+    position: relative;  display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }
 
@@ -70,20 +68,19 @@ header {
   line-height: 1.5;
   max-height: 100vh;
 }
-
-
-
 .navigation__item {
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
-  margin-top: 16px;
-
   color: white;
-
+& + .navigation__item {
+  margin-left: 15px;
+}
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
 }
 
 nav a.router-link-exact-active {
-  //color: var(--color-text);
   color: #f50;
 }
 
@@ -94,20 +91,11 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   color: #252525;
-  padding: 0 1rem;
-
 }
 
 nav a:first-of-type {
   border: 0;
 }
 
-.header__right {
-  display: flex;
-}
 
-.favorite {
-  margin-right: 10px;
-  position: relative;
-}
 </style>

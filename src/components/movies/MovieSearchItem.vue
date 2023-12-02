@@ -1,8 +1,6 @@
 <template>
   <div class="movie__item">
-
-
-    <router-link :to="`/${movie.kinopoiskId}`" href="" class="movie__picture">
+    <router-link :to="`/${movie.filmId}`" href="" class="movie__picture">
       <img :src="movie.posterUrlPreview" alt="">
     </router-link>
     <div class="movie__bottom">
@@ -70,6 +68,5 @@ export default {
   img {
     object-fit: cover;
   }
-
 }
 </style>
