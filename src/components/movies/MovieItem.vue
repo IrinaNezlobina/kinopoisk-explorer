@@ -2,11 +2,11 @@
   <div class="movie__item">
 
 
-    <router-link :to="`/${movie.kinopoiskId}`" href="" class="movie__picture">
+    <router-link :to="`/${movie.kinopoiskId}`"  class="movie__picture">
       <img :src="movie.posterUrlPreview" alt="">
     </router-link>
     <div class="movie__bottom">
-      <a href="" class="movie__name">{{movie.nameRu}}</a>
+      <router-link :to="`/${movie.kinopoiskId}`"  class="movie__name">{{movie.nameRu}}</router-link>
       <div class="movie__genre">
         <span>Жанры:</span>&nbsp;
         <span class="" v-for="item in movie.genres">
@@ -33,10 +33,15 @@ export default {
 }
 </script>
 
-<style lang="scss"  scoped>
+<style lang="scss">
 @import "@/styles/base/mixins.scss";
 .movie__item {
-  color: #f2f2f2
+  color: #f2f2f2;
+  transition: .5s;
+  &:hover {
+    box-shadow:  0 4.5696px 118.81px #000,0 27.4176px 251.328px #000;
+    transform: scale(1.1);
+  }
 }
 .movie__country {
   font-size: 16px;
