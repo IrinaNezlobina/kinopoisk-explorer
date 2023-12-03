@@ -6,6 +6,7 @@
         type="search"
         @keyup.enter="goToSearch"
         @input="searchStore.getData()">
+    <router-link class="header__search-btn" to="/search" ><vue-feather stroke="#FFF" type="search"></vue-feather></router-link>
   </div>
 </template>
 
@@ -49,9 +50,8 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/base/mixins.scss";
 
-
-
 .header__search {
+  position: relative;
   flex-grow: 2;
   margin-top: 10px;
   input {
@@ -67,5 +67,10 @@ export default {
     margin-left: 80px;
     margin-top: 0;
   }
+}
+.header__search-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 </style>
