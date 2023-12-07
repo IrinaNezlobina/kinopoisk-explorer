@@ -12,6 +12,9 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
+    "max-len": "off",
+    "no-console": "off",
     'vue/multi-word-component-names': 'off',
   },
+  ignorePatterns: ["dist/*"],
 }

@@ -9,7 +9,7 @@ import PrimeVue from 'primevue/config';
 
 import App from './App.vue';
 import router from './router';
-import Paginate from "vuejs-paginate-next";
+import Paginate from 'vuejs-paginate-next';
 import VueFeather from 'vue-feather';
 
 const app = createApp(App);
@@ -19,4 +19,4 @@ app.use(router);
 app.use(PrimeVue);
 app.component('paginate', Paginate);
 app.component(VueFeather.name, VueFeather);
-app.mount('#app')
+app.mount('#app');
