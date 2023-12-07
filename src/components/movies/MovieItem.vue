@@ -1,12 +1,11 @@
 <template>
     <div class="movie__item">
         <router-link :to="`/${movie.kinopoiskId}`" class="movie__picture">
-            <img :src="movie.posterUrlPreview" alt=""/>
+            <img :src="movie.posterUrlPreview" alt="" />
         </router-link>
         <div class="movie__bottom">
-            <router-link :to="`/${movie.kinopoiskId}`" class="movie__name">{{
-                    movie.nameRu
-                }}
+            <router-link :to="`/${movie.kinopoiskId}`" class="movie__name"
+                >{{ movie.nameRu }}
             </router-link>
             <div class="movie__genre">
                 <span>Жанры:</span>&nbsp;
@@ -24,11 +23,9 @@
 </template>
 
 <script>
-import aaa
-
 export default {
     name: 'MovieItem',
-    props: ['movie'],
+    props: ['movie']
 };
 </script>
 
@@ -40,8 +37,9 @@ export default {
     transition: 0.5s;
 
     &:hover {
-        box-shadow: 0 4.5696px 118.81px #000,
-        0 27.4176px 251.328px #000;
+        box-shadow:
+            0 4.5696px 118.81px #000,
+            0 27.4176px 251.328px #000;
         transform: scale(1.1);
     }
 }

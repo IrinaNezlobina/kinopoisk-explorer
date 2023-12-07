@@ -6,7 +6,7 @@
                     <RouterLink class="navigation__item" to="/">Популярные фильмы</RouterLink>
                     <RouterLink class="navigation__item" to="/favorite">Буду смотреть</RouterLink>
                 </nav>
-                <Search/>
+                <Search />
             </div>
         </div>
     </header>
@@ -20,7 +20,7 @@ export default {
     data() {
         return {};
     },
-    components: {Search}
+    components: { Search }
 };
 </script>
 

@@ -7,10 +7,8 @@
             @input="searchStore.getData()"
             @keyup.enter="goToSearch"
         />
-        <router-link class="header__search-btn" to="/search"
-        >
-            <vue-feather stroke="#FFF" type="search"></vue-feather
-            >
+        <router-link class="header__search-btn" to="/search">
+            <vue-feather stroke="#FFF" type="search"></vue-feather>
         </router-link>
     </div>
 </template>
@@ -41,7 +39,7 @@ export default {
         goToSearch() {
             router.push('search');
         }
-    },
+    }
 };
 </script>
 
